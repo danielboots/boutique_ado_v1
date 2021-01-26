@@ -24,4 +24,20 @@ def product_detail(request, product_id):
         'product': product,
     }
 
+<<<<<<< HEAD
     return render(request, 'products/product_detail.html', context)
+=======
+    return render(request, "products/products.html", context)
+
+
+def product_detail(request, product_id):
+    """ A view to show individual product details """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        "product": product,
+    }
+
+    return render(request, "products/product_detail.html", context)
+>>>>>>> 44ff4fb7513d611ee2e83802ff77d9503708f35c
